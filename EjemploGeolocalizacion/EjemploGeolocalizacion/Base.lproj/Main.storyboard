@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EjemploGeolocalizacion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zQ4-cg-qiZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bt-sD-xmR">
+                                <rect key="frame" x="162" y="577" width="50" height="30"/>
+                                <state key="normal" title="Hibrido"/>
+                                <connections>
+                                    <action selector="changeStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SZc-Vt-9be"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZE-IG-grc">
+                                <rect key="frame" x="50" y="577" width="52" height="30"/>
+                                <state key="normal" title="Satelite"/>
+                                <connections>
+                                    <action selector="changeStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LBK-wI-l4O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkW-Sp-CGJ">
+                                <rect key="frame" x="272" y="577" width="50" height="30"/>
+                                <state key="normal" title="Normal"/>
+                                <connections>
+                                    <action selector="changeStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZLQ-Uy-une"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zQ4-cg-qiZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QWz-PL-MkK"/>
+                            <constraint firstItem="zQ4-cg-qiZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RS6-nB-Gv1"/>
+                            <constraint firstItem="9bt-sD-xmR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TRZ-JU-zOs"/>
+                            <constraint firstItem="zQ4-cg-qiZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z3h-Ac-GiW"/>
+                            <constraint firstItem="NkW-Sp-CGJ" firstAttribute="leading" secondItem="9bt-sD-xmR" secondAttribute="trailing" constant="60" id="a2d-yK-MeQ"/>
+                            <constraint firstItem="9bt-sD-xmR" firstAttribute="leading" secondItem="DZE-IG-grc" secondAttribute="trailing" constant="60" id="aPg-mo-qHC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9bt-sD-xmR" secondAttribute="bottom" constant="60" id="pj3-wk-07F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NkW-Sp-CGJ" secondAttribute="bottom" constant="60" id="qcU-x5-VNl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DZE-IG-grc" secondAttribute="bottom" constant="60" id="vx0-I1-jp2"/>
+                            <constraint firstItem="zQ4-cg-qiZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wnA-yj-I0I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnHybrid" destination="9bt-sD-xmR" id="Ovs-BF-icv"/>
+                        <outlet property="btnNormal" destination="NkW-Sp-CGJ" id="9RW-n8-RwH"/>
+                        <outlet property="btnSatelite" destination="DZE-IG-grc" id="KiC-CO-5N7"/>
+                        <outlet property="mapView" destination="zQ4-cg-qiZ" id="vhB-ez-W9u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>
